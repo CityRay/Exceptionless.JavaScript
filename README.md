@@ -244,10 +244,10 @@ If you find a bug or want to contribute a feature, feel free to create a pull re
 
 2. Install [Node.js](https://nodejs.org). Node is used for building and testing purposes.
 
-3. Install [tsd](https://github.com/DefinitelyTyped/tsd) and [gulp](http://gulpjs.com) and the development dependencies using [npm](https://www.npmjs.com).
+3. Install [typings](http://github.com/typings/typings) and [gulp](http://gulpjs.com) and the development dependencies using [npm](https://www.npmjs.com).
 
   ```sh
-  npm install -g tsd
+  npm install -g typings
   npm install -g gulp
   npm install
   ```

@@ -60,7 +60,7 @@ var NodeSubmissionAdapter = (function () {
         callback(result.status, result.message, result.data, result.headers);
     };
     return NodeSubmissionAdapter;
-})();
+}());
 exports.NodeSubmissionAdapter = NodeSubmissionAdapter;
 var decoder = new string_decoder_1.StringDecoder('utf8');
 var strings = [];

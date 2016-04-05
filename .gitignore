@@ -3,6 +3,6 @@
 node_modules
 jspm_packages
 public
-/dist/temp
-/src/typings
+dist/temp/
+typings/
 example/exceptionless.js

@@ -10,15 +10,15 @@ gulp.task('clean', function () {
 });
 
 gulp.task('typescript', function () {
-  return tsProject.src('src/tsconfig.json').pipe(gulp.dest('dist/temp'));
+  return tsProject.src('tsconfig.json').pipe(gulp.dest('dist/temp'));
 });
 
 gulp.task('typescript.integrations', ['typescript'], function () {
-  return tsProject.src('src/integrations/tsconfig.json').pipe(gulp.dest('dist/temp'));
+  return tsProject.src('tsconfig.integrations.json').pipe(gulp.dest('dist/temp'));
 });
 
 gulp.task('typescript.node', function () {
-  return tsProject.src('src/tsconfig.node.json').pipe(gulp.dest('dist/temp'));
+  return tsProject.src('tsconfig.node.json').pipe(gulp.dest('dist/temp'));
 });
 
 gulp.task('exceptionless.umd', ['typescript', 'typescript.integrations'], function () {
@@ -73,8 +73,8 @@ gulp.task('exceptionless', ['exceptionless.umd'], function () {
 gulp.task('exceptionless.node', ['typescript.node'], function () {
 
   var files = [
-    'dist/temp/src/exceptionless.node.js',
-    'dist/temp/src/submitSync.js'
+    'dist/temp/exceptionless.node.js',
+    'dist/temp/submitSync.js'
   ];
 
   gulp.src(files)
@@ -90,7 +90,7 @@ gulp.task('watch', ['build'], function () {
 
 gulp.task('lint', function () {
   var tslint = require('gulp-tslint');
-  return gulp.src(['src/**/*.ts', '!src/typings/**/*.ts'])
+  return gulp.src('src/**/*.ts')
     .pipe(tslint())
     .pipe(tslint.report('verbose'));
 });
@@ -98,7 +98,7 @@ gulp.task('lint', function () {
 gulp.task('build', ['clean', 'lint', 'exceptionless', 'exceptionless.node']);
 
 gulp.task('typescript.test', function () {
-  return tsProject.src('src/tsconfig.test.json').pipe(gulp.dest('dist/temp'));
+  return tsProject.src('tsconfig.test.json').pipe(gulp.dest('dist/temp'));
 });
 
 gulp.task('exceptionless.test.umd', ['typescript.test'], function () {
@@ -128,7 +128,7 @@ gulp.task('test', ['exceptionless.test.umd'], function(done) {
 
 gulp.task('format', function () {
   var exec = require('gulp-exec');
-  return gulp.src(['src/**/*.ts', '!src/typings/**/*.ts'])
+  return gulp.src('src/**/*.ts')
     .pipe(exec('node_modules/typescript-formatter/bin/tsfmt -r <%= file.path %>'))
     .pipe(exec.reporter());
 });

@@ -46,7 +46,7 @@ describe('ExceptionlessClient', () => {
     expect(builder.target.data).to.be.undefined;
   });
 
-  it('should accept source and message', () => {
+  it('should accept message', () => {
     let client = new ExceptionlessClient('LhhP1C9gijpSKCslHHCvwdSIz298twx271n1l6xw', 'http://localhost:50000');
     let builder = client.createLog('Unit Test message');
 

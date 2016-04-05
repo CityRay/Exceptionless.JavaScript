@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es5",
+    "noImplicitUseStrict": true
+  },
+  "exclude": [
+    "dist",
+    "example",
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
+  ],
+  "bundles": {
+    "angular": {
+      "files": [
+        "src/integrations/angular.ts"
+      ]
+    }
+  }
+}

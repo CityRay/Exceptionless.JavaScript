@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "noImplicitUseStrict": true
+  },
+  "exclude": [
+    "dist",
+    "example",
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
+  ],
+  "bundles": {
+    "exceptionless": {
+      "files": [
+        "src/exceptionless.ts"
+      ],
+      "config": {
+        "minify": false
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "exceptionless",
+  "version": false,
+  "ambientDependencies": {
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "stack-trace": "github:DefinitelyTyped/DefinitelyTyped/stack-trace/stack-trace.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "mocha": "github:DefinitelyTyped/DefinitelyTyped/mocha/mocha.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "assertion-error": "github:DefinitelyTyped/DefinitelyTyped/assertion-error/assertion-error.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "chai": "github:DefinitelyTyped/DefinitelyTyped/chai/chai.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d",
+    "mock-fs": "github:DefinitelyTyped/DefinitelyTyped/mock-fs/mock-fs.d.ts#d969b903d1fce89a5e43828ec68458b4f852db4d"
+  }
+}
