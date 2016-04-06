@@ -4,6 +4,8 @@ import { IErrorParser } from './IErrorParser';
 import { IStackFrame } from '../models/IStackFrame';
 import { EventPluginContext } from '../plugins/EventPluginContext';
 
+import * as TraceKit from 'tracekit';
+
 export class DefaultErrorParser implements IErrorParser {
   public parse(context: EventPluginContext, exception: Error): IError {
     function getParameters(parameters: string | string[]): IParameter[] {

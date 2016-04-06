@@ -43,8 +43,8 @@
     "rimraf": "2.5.2",
     "source-map-support": "0.4.0",
     "mock-fs": "3.8.0",
-    "tracekit": "0.3.2",
-    "tslint": "3.6.0",
+    "tracekit": "0.3.4",
+    "tslint": "3.7.1",
     "tsproject": "1.2.0",
     "typescript": "1.8.9",
     "typescript-formatter": "2.1.0"
